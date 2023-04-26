@@ -13,7 +13,7 @@ const MuiImageList = () => {
       <img 
         src={`${img}?w=164&h=164&fit=crop&auto=format&dpr=2`} 
         alt={title} 
-        loading='lazy'
+        // loading='lazy'
         className="muiImageList-img"
       />
     </ImageListItem>
@@ -23,17 +23,6 @@ const MuiImageList = () => {
     <div className='mui-img-list-box' >
       <ImageList sx={{ width: '90%', height: 545}} variant="woven" cols={3} gap={8} >
         {imagesData.map(renderImageListItem)}
-      </ImageList>
-
-      <ImageList sx={{ width: '90%', height: 545}} variant="woven" cols={3} gap={8} >
-        <ImageListItem>
-          <img 
-            src='imgs/family1.jpg?w=164&h=164&fit=crop&auto=format&dpr=2'
-            alt='family' 
-            loading='lazy'
-            className="muiImageList-img"
-          />
-        </ImageListItem>
       </ImageList>
 
       <Button 
