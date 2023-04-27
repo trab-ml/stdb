@@ -1,6 +1,6 @@
 {
   "homepage": "https://trab-ml.github.io/stdb",
-  "name": "a-bank-website",
+  "name": "stdb",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@types/uuid": "^9.0.1",
     "gh-pages": "^5.0.0",
     "webpack": "^5.80.0",
     "webpack-cli": "^5.0.2",

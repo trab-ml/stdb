@@ -1,6 +1,7 @@
 import React from "react";
 import { ImageList, ImageListItem, Button} from "@mui/material";
-import { imagesData } from "../ressources/img";
+import { v4 as uuidv4 } from 'uuid';
+import { imagesData } from "../resources/img";
 
 interface RenderImageListItemProps {
   img: string,
@@ -8,13 +9,17 @@ interface RenderImageListItemProps {
 };
  
 const MuiImageList = () => {
+  console.log(imagesData);
   const renderImageListItem = ({img, title} : RenderImageListItemProps) => (
-    <ImageListItem key={img} >
+    <ImageListItem key={uuidv4()}>
       <img 
-        src={`${img}?w=164&h=164&fit=crop&auto=format&dpr=2`} 
+        // src={`${img}?w=164&h=164&fit=crop&auto=format&dpr=2`} 
+        src={img} 
         alt={title} 
-        // loading='lazy'
+        loading='lazy'
         className="muiImageList-img"
+        width={164}
+        height={164}
       />
     </ImageListItem>
   );
