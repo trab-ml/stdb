@@ -1,6 +1,7 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, useContext } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import Box from '@mui/material/Box';
+import { selectedNavIsHomeContext } from './Context';
 
 const Home = lazy(() => import('../components/Home'));
 const Feature = lazy(() => import('../components/Feature'));
@@ -11,11 +12,9 @@ const Login = lazy(() => import('../components/Login'));
 const Register = lazy(() => import('../components/Register'));
 const Footer = lazy(() => import('../footer/Footer'));
 
-interface RoutesComponentProps {
-    selectedNavIsHome: boolean;
-}
+const RoutesComponent = () => {
+    const { selectedNavIsHome } = useContext(selectedNavIsHomeContext);
 
-const RoutesComponent: React.FC<RoutesComponentProps> = ({ selectedNavIsHome }) => {
     return (
         <Box className='routes-component' style={selectedNavIsHome ? {} : { height: '100vh' }}>
             <Suspense fallback={<div>Loading...</div>}>

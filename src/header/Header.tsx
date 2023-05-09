@@ -1,18 +1,15 @@
-import React, { FC } from 'react';
+import React from 'react';
 import ToolbarComponent from './ToolbarComponent';
 import { AppBar } from "@mui/material";
 import RoutesComponent from './RoutesComponent';
-import './header.css'
+import './header.css';
 
-interface HeaderProps {
-    selectedNavIsHome: boolean;
-    setSelectedNavIsHome: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
-const Header: FC<HeaderProps> = ({ selectedNavIsHome, setSelectedNavIsHome }) => {
+const Header = () => {
+
     return (<AppBar id='appbar'>
-        <ToolbarComponent setSelectedNavIsHome={setSelectedNavIsHome} />
-        <RoutesComponent selectedNavIsHome={selectedNavIsHome} />
+        <ToolbarComponent />
+        <RoutesComponent />
     </AppBar>)
 }
 

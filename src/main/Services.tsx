@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@mui/material';
 
-interface Service {
+type Service = {
   title: string;
   description: string;
 }

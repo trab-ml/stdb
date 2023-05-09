@@ -3,10 +3,10 @@ export const imagesData = [
         img: './tst.png',
         title: 'test'
     },
-    {
-        img: './imgs/family2.jpg',
-        title: 'family'
-    },
+    // {
+    //     img: './imgs/family2.jpg',
+    //     title: 'family'
+    // },
     {
         img: './imgs/work3.jpg',
         title: 'work'

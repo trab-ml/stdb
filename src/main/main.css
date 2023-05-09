@@ -145,6 +145,10 @@ main {
         0px 1px 10px 0px rgba(0,0,0,0.12);
 }  
 
+.form-field {
+    margin-top: .7rem;
+}
+
 @media screen and (max-width: 768px) {
     .services-box-main-title h2, .signup p {
         font-size: medium;

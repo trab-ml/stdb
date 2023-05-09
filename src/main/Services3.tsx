@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Testimonial {
+type Testimonial = {
   author: string;
   testimonial: string;
 }

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { Menu, Home, MonetizationOn, Login, Support, ProductionQuantityLimits, Group, Mail } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
-import { ToolbarComponentProps } from "./ToolbarComponent";
+import { selectedNavIsHomeContext } from './Context';
 
 const PAGES: string[] = ["features", "pricing", "community", "support", "login", "register"];
 // const ICONS: React.FC[] = [, ProductionQuantityLimits, MonetizationOn, Group, Support, Login, Login];
 
-const DrawerComp: React.FC<ToolbarComponentProps> = ({ setSelectedNavIsHome }) => {
+const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
-  // const [clickOnNothing, setClickOnNothing] = useState<boolean>(false);
+  const { setSelectedNavIsHome } = useContext(selectedNavIsHomeContext);
 
   const handleCloseDrawer = (): void => {
     setSelectedNavIsHome(false);
@@ -24,6 +24,7 @@ const DrawerComp: React.FC<ToolbarComponentProps> = ({ setSelectedNavIsHome }) =
   const handleToggleDrawer = (): void => {
     setOpenDrawer(!openDrawer);
   };
+
 
   return (
     <>
