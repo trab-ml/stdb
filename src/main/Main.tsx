@@ -4,7 +4,8 @@ import Services from './Services';
 import Services2 from './Services2';
 import Services3 from './Services3';
 import Signup from './Signup';
-import './main.css'
+import './main.css';
+
 
 const Main = () => {
   return (

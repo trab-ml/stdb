@@ -1,42 +1,40 @@
-export const imagesData = [
+const IMAGES = [
     {
-        img: './tst.png',
-        title: 'test'
+        img: 'family2.jpg',
+        title: 'family'
     },
-    // {
-    //     img: './imgs/family2.jpg',
-    //     title: 'family'
-    // },
     {
-        img: './imgs/work3.jpg',
+        img: 'work3.jpg',
         title: 'work'
     },
     {
-        img: './imgs/work4.jpg',
+        img: 'work4.jpg',
         title: 'work'
     },
     {
-        img: './imgs/work6.jpg',
+        img: 'work6.jpg',
         title: 'work'
     },
     {
-        img: './imgs/work7.jpg',
+        img: 'work7.jpg',
         title: 'work'
     },
     {
-        img: './imgs/young1.jpg',
+        img: 'young1.jpg',
         title: 'work'
     },
     {
-        img: './imgs/young2.jpg',
+        img: 'young1.jpg',
         title: 'work'
     },
     {
-        img: './imgs/work3.jpg',
+        img: 'work3.jpg',
         title: 'work'
     },
     {
-        img: './imgs/young1.jpg',
+        img: 'young1.jpg',
         title: 'young'
     },
 ];
+
+export default IMAGES;

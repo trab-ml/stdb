@@ -99,6 +99,49 @@ a {
     background: var(--primary);
 }
 
+/* test */
+.sidebar-container .sidebar {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    width: 200px;
+    transition: all 0.5s;
+}
+
+.sidebar-container .top_section {
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.link {
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+    align-items: center;
+}
+
+.link:hover {
+    background: var(--primary);
+    color: #000;
+    transition: all 0.5s;
+}
+
+.icon, .link-text, .bars-menu{
+    font-size: 20px;
+}
+
+.link-text {
+    color: #fff;
+}
+/* test */
+
 /* .sidebar-navlink:hover {} */
 
 /* Media queries */

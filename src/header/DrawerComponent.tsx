@@ -4,9 +4,6 @@ import { Menu, Home, MonetizationOn, Login, Support, ProductionQuantityLimits, G
 import { NavLink } from 'react-router-dom';
 import { selectedNavIsHomeContext } from './Context';
 
-const PAGES: string[] = ["features", "pricing", "community", "support", "login", "register"];
-// const ICONS: React.FC[] = [, ProductionQuantityLimits, MonetizationOn, Group, Support, Login, Login];
-
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const { setSelectedNavIsHome } = useContext(selectedNavIsHomeContext);
@@ -24,30 +21,71 @@ const DrawerComp = () => {
   const handleToggleDrawer = (): void => {
     setOpenDrawer(!openDrawer);
   };
-
+  const menuItem = [
+    // {
+    //     path: "/",
+    //     name: "home",
+    //     icon: <Home />
+    // },
+    {
+        path: "/features",
+        name: "features",
+        icon: <ProductionQuantityLimits />
+    },
+    {
+        path: "/pricing",
+        name: "pricing",
+        icon: <MonetizationOn />
+    },
+    {
+        path: "/community",
+        name: "community",
+        icon: <Group />
+    },
+    {
+        path: "/support",
+        name: "support",
+        icon: <Support />
+    },
+    {
+        path: "/login",
+        name: "login",
+        icon: <Login />
+    },
+    {
+        path: "/register",
+        name: "register",
+        icon: <Login />
+    }
+  ]
 
   return (
     <>
       <Drawer open={openDrawer} onClose={handleCloseDrawer}>
-        <nav>
-          <List id='sidebar'>
-
-            <NavLink to={'home'} className='sidebar-navlink'>
-                {/* <ListItem className='sidebar-navlink'></ListItem>  */}
-                  {/* <Home /> */}
-                  <ListItemText primary={'home'} onClick={getBackToHome} className='list-item-text' />
-            </NavLink>
-
-            {PAGES.map((page: string, index: number) => (
-              <NavLink key={page} to={page} className='sidebar-navlink'>
-                  <ListItemText primary={page} onClick={handleCloseDrawer} className='list-item-text' />
-                {/* <ListItem className='sidebar-listitem'>
-                  ICONS[index]
-                </ListItem>  */}
+        <div className="sidebar-container">
+          <div className="sidebar">
+            <div className="top_section">
+              <h1 className="logo">STDB LOGO</h1>
+              {/* onClick={getBackToHome} */}
+              {/* <Menu onClick={toggle} className='bars-menu'/>
+              <div className="bars"></div> */}
+            </div>
+            <nav>
+              <NavLink to='/'className='link' onClick={getBackToHome}>
+                <div className='icon'> <Home /> </div>
+                <div className='link_text'>Home</div>
               </NavLink>
-            ))}
-          </List>
-        </nav>
+              {
+                menuItem.map((item, index) => (
+                  <NavLink to={item.path} key={index} className='link' onClick={handleCloseDrawer}>
+                    <div className='icon'> {item.icon} </div>
+                    <div className='link_text'> {item.name} </div>
+                  </NavLink>
+                ))
+              }
+            </nav>
+          </div>
+        </div>
       </Drawer> 
 
       <IconButton onClick={handleToggleDrawer} id='menu-icon' sx={{ marginLeft: 'auto', color:'white'}}>
