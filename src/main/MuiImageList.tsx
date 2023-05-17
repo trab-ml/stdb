@@ -2,6 +2,7 @@ import React from "react";
 import { ImageList, ImageListItem, Button} from "@mui/material";
 import { v4 as uuidv4 } from 'uuid';
 import IMAGES from "../resources/img";
+// import { NavLink } from "react-router-dom";
 
 type RenderImageListItemProps =  {
   imgName: string,
@@ -38,6 +39,7 @@ const MuiImageList = () => {
         id="mui-img-list-box-btn"
         className="mui-img-list-box-btn"
       >
+        {/* <NavLink to='/register'>join today</NavLink> */}
         join today
       </Button>
     </div>

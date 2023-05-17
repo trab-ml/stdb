@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { Menu, Home, MonetizationOn, Login, Support, ProductionQuantityLimits, Group, Mail } from '@mui/icons-material';
+import { Drawer, IconButton } from '@mui/material';
+import { Menu, Home, MonetizationOn, Login, Support, ProductionQuantityLimits, Group } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
 import { selectedNavIsHomeContext } from './Context';
 
@@ -9,6 +9,10 @@ const DrawerComp = () => {
   const { setSelectedNavIsHome } = useContext(selectedNavIsHomeContext);
 
   const handleCloseDrawer = (): void => {
+    setOpenDrawer(false);
+  };
+
+  const handleCloseTriggedByNav = (): void => {
     setSelectedNavIsHome(false);
     setOpenDrawer(false);
   };
@@ -77,7 +81,7 @@ const DrawerComp = () => {
               </NavLink>
               {
                 menuItem.map((item, index) => (
-                  <NavLink to={item.path} key={index} className='link' onClick={handleCloseDrawer}>
+                  <NavLink to={item.path} key={index} className='link' onClick={handleCloseTriggedByNav}>
                     <div className='icon'> {item.icon} </div>
                     <div className='link_text'> {item.name} </div>
                   </NavLink>

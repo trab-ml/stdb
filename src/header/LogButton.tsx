@@ -7,7 +7,7 @@ export const LogButton = () => {
     const { setSelectedNavIsHome } = useContext(selectedNavIsHomeContext);
 
     return (<NavLink id='login-btn' className='get-hosted' to='/login' onClick={() => setSelectedNavIsHome(false)}>
-        <Button className='button' variant="outlined" sx={{marginLeft: 'auto'}}>
+        <Button className='button' variant="outlined" >
             Log In
         </Button>
     </NavLink>)

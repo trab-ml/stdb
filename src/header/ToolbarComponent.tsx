@@ -14,7 +14,14 @@ import { selectedNavIsHomeContext } from './Context';
 import { LogButton } from './LogButton';
 import { RegisterButton } from './RegisterButton';
 
-const pages: string[] = ["features", "pricing", "community", "support"];
+// const pages: string[] = ["ouvrir un compte", "se loger", "nos conseils", "nous contacter"];
+const pages: { name: string; link: string }[] = [
+  { name: "ouvrir un compte", link: "features" },
+  { name: "se loger", link: "pricing" },
+  { name: "nos conseils", link: "community" },
+  { name: "nous contacter", link: "support" }
+];
+
 
 type ToolbarState = {
   appNavState: number;
@@ -37,14 +44,14 @@ const ToolbarComponent = () => {
       {isMobileView ? ( 
         <>
           <NavLink to='/' onClick={() => setSelectedNavIsHome(true)}>
-            <Typography id='logo'><Home /></Typography>
+            <Typography><Home /></Typography>
           </NavLink>
           <DrawerComp />
         </>
       ) : (
         <>
-          <Typography >STDB LOGO</Typography>
-            <nav>
+          <Typography ><img src={`${process.env.PUBLIC_URL}/stdb.png`} alt='studentBank' id='logo' /></Typography>
+            <nav id='header-navbar'>
               <Tabs
                 value={state.appNavState}
                 onChange={handleNavChange}
@@ -56,12 +63,12 @@ const ToolbarComponent = () => {
                   className='tab'
                   onClick={() => setSelectedNavIsHome(true)}
                 />
-                {pages.map((page: string, index: number) => (
+                {pages.map((page: { name: string; link: string }, index: number) => (
                   <Tab
                     key={index}
-                    label={page}
+                    label={page.name}
                     component={NavLink}
-                    to={`/${page}`}
+                    to={`/${page.link}`}
                     className='tab'
                   />
                 ))}

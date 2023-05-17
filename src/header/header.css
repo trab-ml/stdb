@@ -20,6 +20,10 @@ a {
     border: none;
 }
 
+#appbar a {
+    text-transform: capitalize;
+}
+
 #appbar a:hover::after {
     content: '';
     position: absolute;
@@ -27,12 +31,29 @@ a {
     bottom: 0.01rem; 
     width: 80%;
     height: 0.1rem;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
+    background-color: red;
+}
+
+#logo { 
+    font-size: large;
+    padding: 0;
+    margin: 0 0 0 -4rem !important;
 }
 
 #login-btn {
     margin-left: auto;
 }
+
+#register-btn button {
+    margin-left: 10px;
+    margin-right: -3rem;
+    background: '#18A0FB'
+}
+
+/* #appbar a, #login-btn button, #register-btn button {
+    color: red;
+} */
 
 #appbar a.get-hosted:hover::after {
     bottom: 0; 
@@ -56,11 +77,9 @@ a {
 .toolbar a {
     color: var(--primary);
 }
-    
-#logo { 
-    font-size: large;
-    padding: 0;
-    margin-right: 0;
+
+#header-navbar {
+    margin-right: -4rem !important;
 }
 
 .routes-component {

@@ -48,15 +48,10 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    margin: 15vh 6vh 16.3vh;
+    margin: 15vh 0 16.3vh;
 }
 
 .services-grid-container h1 {
-    /* word-wrap: break-word;*/
-
-    /* NADA */
-    /* max-width: 50%; */
-    /* word-wrap: break-word; */
     height: fit-content;
 }
 
@@ -76,7 +71,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 20px;
+    justify-content: space-between;
     align-items: center;
     overflow: auto;
   }
@@ -84,8 +79,8 @@ main {
 .services2-grid-container .grid-item {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+    text-align: left;
 }
 
 .services2-grid-container .grid-item:nth-child(3),
