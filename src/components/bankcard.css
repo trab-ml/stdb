@@ -1,0 +1,40 @@
+#creditcard-container h1 {
+    font-size: 900;
+    text-align: center;
+}
+
+#creditcard-container div {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.bankcard {
+    background-color: #E5E5E5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    max-width: 40rem;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.bankcard Button:hover {
+    /* background: green; */
+    border-radius: 7px;
+}
+
+.bankcard Button:hover {
+    /* color: red; */
+    border-radius: 5px;
+}
+
+.bankcard img {
+    max-width: 70%;
+}

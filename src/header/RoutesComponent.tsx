@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useContext } from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import { selectedNavIsHomeContext } from './Context';
 
@@ -16,7 +16,7 @@ const RoutesComponent = () => {
     const { selectedNavIsHome } = useContext(selectedNavIsHomeContext);
 
     return (
-        <Box className='routes-component' style={selectedNavIsHome ? {} : { height: '100vh' }}>
+        <Box className='routes-component' style={selectedNavIsHome ? {} : { height: '100vh', margin: '5vh 0' }}>
             <Suspense fallback={<div>Loading...</div>}>
             <Routes>
                 <Route path='/' element={<Home />} />
