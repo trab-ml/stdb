@@ -16,24 +16,24 @@ const IMAGES = [
         title: 'work'
     },
     {
-        img: 'work7.jpg',
-        title: 'work'
+        img: 'jeuneDiplome.jpg',
+        title: 'jeune diplome'
     },
     {
         img: 'young1.jpg',
         title: 'work'
     },
     {
-        img: 'young1.jpg',
-        title: 'work'
+        img: 'cours.jpg',
+        title: 'cm'
     },
     {
-        img: 'work3.jpg',
-        title: 'work'
+        img: 'gradedTogetherr.jpg',
+        title: 'graded together'
     },
     {
-        img: 'young1.jpg',
-        title: 'young'
+        img: 'etudierSereinement.jpg',
+        title: 'etudier sereinement'
     },
 ];
 
