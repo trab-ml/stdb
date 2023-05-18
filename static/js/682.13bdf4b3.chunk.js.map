@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/682.13bdf4b3.chunk.js","mappings":"4HAUA,UARA,WACE,OACEA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,WAIT,C","sources":["components/Feature.tsx"],"sourcesContent":["import React from 'react'\n\nfunction Feature() {\n  return (\n    <div>\n      Feature\n    </div>\n  )\n}\n\nexport default Feature\n"],"names":["_jsx","children"],"sourceRoot":""}

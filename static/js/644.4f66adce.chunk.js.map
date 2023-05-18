@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/644.4f66adce.chunk.js","mappings":"6HAUA,UARA,WACE,OACEA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,WAIT,C","sources":["components/Pricing.tsx"],"sourcesContent":["import React from 'react'\n\nfunction Pricing() {\n  return (\n    <div>\n      Pricing\n    </div>\n  )\n}\n\nexport default Pricing\n"],"names":["_jsx","children"],"sourceRoot":""}
