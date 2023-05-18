@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useContext } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import { selectedNavIsHomeContext } from './Context';
 
