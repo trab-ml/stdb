@@ -1,7 +1,7 @@
 const IMAGES = [
     {
-        img: 'family2.jpg',
-        title: 'family'
+        img: 'graded.jpg',
+        title: 'graded at school'
     },
     {
         img: 'work3.jpg',
@@ -20,20 +20,20 @@ const IMAGES = [
         title: 'jeune diplome'
     },
     {
-        img: 'young1.jpg',
-        title: 'work'
-    },
-    {
         img: 'cours.jpg',
         title: 'cm'
+    },
+    {
+        img: 'etudierSereinement.jpg',
+        title: 'etudier sereinement'
     },
     {
         img: 'gradedTogetherr.jpg',
         title: 'graded together'
     },
     {
-        img: 'etudierSereinement.jpg',
-        title: 'etudier sereinement'
+        img: 'gradedTogether.jpg',
+        title: 'graded together'
     },
 ];
 

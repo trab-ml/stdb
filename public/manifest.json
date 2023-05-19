@@ -1,7 +1,18 @@
 {
-  "short_name": "React App",
+  "short_name": "StudentBank",
   "name": "Create React App Sample",
-  "icons": [],
+  "icons": [
+    {
+      "src": "path/to/icon.png",
+      "sizes": "123x50",
+      "type": "image/png"
+    },
+    {
+      "src": "path/to/icon.png",
+      "sizes": "223x71",
+      "type": "image/png"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
