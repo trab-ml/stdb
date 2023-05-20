@@ -1,6 +1,6 @@
 import React from 'react';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
-import StarHalfIcon from '@mui/icons-material/StarHalf';
+// import StarHalfIcon from '@mui/icons-material/StarHalf';
 import StarIcon from '@mui/icons-material/Star';
 
 const RATE_LIMIT: number[] = [1, 2, 3, 4, 5];

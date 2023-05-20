@@ -1,5 +1,4 @@
 import React from 'react';
-import { Typography } from "@mui/material";
 import PlaceIcon from '@mui/icons-material/Place';
 import RateGiver from './RateGiver';
 import './Housing.css';
