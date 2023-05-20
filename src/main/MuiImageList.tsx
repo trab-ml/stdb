@@ -19,8 +19,8 @@ const MuiImageList = () => {
         alt={title} 
         loading='lazy'
         className="muiImageList-img"
-        width={164}
-        height={164}
+        // width={164}
+        // height={164}
       />
     </ImageListItem>
   );
