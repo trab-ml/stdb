@@ -25,18 +25,31 @@ const services: Service[] = [
   },
 ];
 
+const ServiceItem: React.FC<Service> = React.memo(
+  ({ title, description }) => (
+    <div className="grid-item">
+      <h3 className='services-box-main-title'>{title}</h3>
+      <p>{description}</p>
+      <Button variant="outlined" className='services-btn'>
+        <a href='# '>Learn More</a>
+      </Button>
+    </div>
+  ),
+  (prevProps, nextProps) =>
+    prevProps.title === nextProps.title &&
+    prevProps.description === nextProps.description
+);
+
 export default function Services(): JSX.Element {
   return (
     <div className="services-grid-container">
-      <h1 className='grid-item'><span>Studentbank, Always looking after your satisfaction !</span></h1>
+      <h1 className='grid-item'><span>Studentbank, Always looking after your satisfaction!</span></h1>
       {services.map((service: Service, index: number) => (
-        <div className="grid-item" key={index}>
-          <h3 className='services-box-main-title'>{service.title}</h3>
-          <p>{service.description}</p>
-          <Button variant="outlined" className='services-btn'>
-            <a href='# '>Learn More</a>
-          </Button>
-        </div>
+        <ServiceItem
+          key={index}
+          title={service.title}
+          description={service.description}
+        />
       ))}
     </div>
   );

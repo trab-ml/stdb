@@ -2,19 +2,12 @@ import React, { useState, useContext, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AccountBalance, Home } from '@mui/icons-material';
 import DrawerComp from './DrawerComponent';
-import {
-  Tab,
-  Tabs,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Tab, Tabs, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { selectedNavIsHomeContext } from './Context';
 import { LogButton } from './LogButton';
 import { RegisterButton } from './RegisterButton';
 
-const pages: { name: string; link: string }[] = [
+const LINKS: { name: string; link: string }[] = [
   { name: "ouvrir un compte", link: "features" },
   { name: "se loger", link: "pricing" },
   { name: "nos conseils", link: "community" },
@@ -37,9 +30,9 @@ const ToolbarComponent = () => {
     setState({ appNavState: value });
   };
 
-  const mappedPages = useMemo(
+  const mappedLinks = useMemo(
     () =>
-      pages.map((page: { name: string; link: string }, index: number) => (
+      LINKS.map((page: { name: string; link: string }, index: number) => (
         <Tab
           key={index}
           label={page.name}
@@ -48,15 +41,15 @@ const ToolbarComponent = () => {
           className='tab'
         />
       )),
-    [pages]
+    []
   );
 
   return (
-    <Toolbar>
+    <div style={{display: 'flex', alignItems: 'center'}}>
       {isMobileView ? ( 
         <>
           <NavLink to='/' onClick={() => setSelectedNavIsHome(true)}>
-            <Typography><Home /></Typography>
+            <Typography><Home id='home-icon' /></Typography>
           </NavLink>
           <DrawerComp />
         </>
@@ -72,10 +65,9 @@ const ToolbarComponent = () => {
                   label={<AccountBalance />}
                   component={NavLink}
                   to={'/'}
-                  className='tab'
                   onClick={() => setSelectedNavIsHome(true)}
                 />
-                {mappedPages}
+                {mappedLinks}
               </Tabs>
             </nav>
 
@@ -84,7 +76,7 @@ const ToolbarComponent = () => {
         </>
         )
       }
-    </Toolbar>
+    </div>
   )
 }
 

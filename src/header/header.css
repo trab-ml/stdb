@@ -31,33 +31,51 @@ a {
     bottom: 0.01rem; 
     width: 80%;
     height: 0.1rem;
-    /* background-color: var(--primary); */
     background-color: red;
 }
 
-#logo { 
-    font-size: large;
-    padding: 0;
-    margin: 0 0 0 -4rem !important;
+#home-icon {
+    font-size: 3rem;
+    margin-left: -2rem;
 }
 
-#login-btn {
+#drawer-menu-icon {
+    margin-right: -1.5rem;
+    background-color: var(--primary);
+}
+
+#logo { /* STDB LOGO */
+    font-size: large !important;
+    padding: 0;
+    margin: 0 0 0 -2.5rem !important;
+}
+
+#login-link {
     margin-left: auto;
 }
 
-#register-btn button {
+#register-link {
     margin-left: 10px;
-    margin-right: -3rem;
-    background: '#18A0FB'
+    margin-right: -1.5rem !important;
+    background-color: #18A0FB ;
+    color: white;
 }
 
-/* #appbar a, #login-btn button, #register-btn button {
-    color: red;
-} */
+#login-link:hover, #register-link:hover {
+    box-shadow: 1px 1px .5px 0.2px var(--primary);
+}
+
+#appbar a.get-hosted {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 7px;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
 
 #appbar a.get-hosted:hover::after {
     bottom: 0; 
-    width: 0%;
+    width: 0;
     height: 0;
 }
 
@@ -118,7 +136,6 @@ a {
     background: var(--primary);
 }
 
-/* test */
 .sidebar-container .sidebar {
     background-color: #000;
     color: #fff;
@@ -131,10 +148,6 @@ a {
     display: flex;
     align-items: center;
     padding: 0px 15px;
-}
-
-.logo {
-    font-size: 30px;
 }
 
 .link {
@@ -159,19 +172,35 @@ a {
 .link-text {
     color: #fff;
 }
-/* test */
-
-/* .sidebar-navlink:hover {} */
 
 /* Media queries */
-@media screen and (max-width: 918px) {
-    #appbar div a {
+@media screen and (max-width: 1306px) {
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+        padding: 2px !important;
+    }
+    #appbar div nav a {
         width: 18%;
+        min-width: 70px;
     } 
-    
-    #appbar div a:hover::after {
-        width: 17%;
+}
+
+@media screen and (max-width: 1178px) {
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+        padding: 0px !important;
+        font-size: .1rem;
+    }
+    #appbar div nav a {
+        width: 5%;
     } 
+}
+
+@media screen and (max-width: 1100px) {
+    #register-link {
+        margin-left: 5px;
+    }
+    #login-link, #register-link {
+        font-weight: 200;
+    }
 }
     
 @media screen and (max-width: 600px) {

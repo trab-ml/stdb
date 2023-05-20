@@ -82,9 +82,6 @@ const DrawerComp = () => {
           <div className="sidebar">
             <div className="top_section">
               <h1 className="logo">STDB LOGO</h1>
-              {/* onClick={getBackToHome} */}
-              {/* <Menu onClick={toggle} className='bars-menu'/>
-              <div className="bars"></div> */}
             </div>
             <nav>
               <NavLink to='/' className='link' onClick={getBackToHome}>
@@ -97,7 +94,7 @@ const DrawerComp = () => {
         </div>
       </Drawer>
 
-      <IconButton onClick={handleToggleDrawer} id='menu-icon' sx={{ marginLeft: 'auto', color: 'white' }}>
+      <IconButton onClick={handleToggleDrawer} id='drawer-menu-icon' sx={{ marginLeft: 'auto', color: 'white' }}>
         <Menu />
       </IconButton>
     </>

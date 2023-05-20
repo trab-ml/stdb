@@ -48,6 +48,18 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+const TestimonialCell: React.FC<Testimonial> = React.memo(
+  ({ testimonial, author }) => (
+    <div className="testimonial-cell">
+      <p>{testimonial}</p>
+      <small>{author}</small>
+    </div>
+  ),
+  (prevProps, nextProps) =>
+    prevProps.testimonial === nextProps.testimonial &&
+    prevProps.author === nextProps.author
+);
+
 const Services3: React.FC = () => {
   return (
     <div className="services3-container">
@@ -58,10 +70,11 @@ const Services3: React.FC = () => {
 
       <div className="testimonials-grid">
         {testimonials.map((testimonial, index) => (
-          <div className="testimonial-cell" key={index}>
-            <p>{testimonial.testimonial}</p>
-            <small>{testimonial.author}</small>
-          </div>
+          <TestimonialCell
+            key={index}
+            testimonial={testimonial.testimonial}
+            author={testimonial.author}
+          />
         ))}
       </div>
     </div>

@@ -144,13 +144,27 @@ main {
     margin-top: .7rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) { /* for testimonials */
+    .services3-container {
+        padding: 0; 
+    }
+
     .services-box-main-title h2, .signup p {
         font-size: medium;
     }
-} 
 
-@media screen and (max-width: 658px) {
+    .services3-container .testimonial-cell {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .services3-container .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+
 }
 
 @media screen and (max-width: 592px) {
@@ -164,7 +178,6 @@ main {
     .services3-container .testimonial-cell {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        gap: 10px;
     }
     .services3-container .testimonial-cell:nth-child(even) {
         display: none;
@@ -221,11 +234,6 @@ main {
         margin: 1vh 0;
     }
 
-    .services3-container {
-        margin: 10vh auto;
-        padding: 0 5px;
-    }
-
     .services3-heading {
         margin-bottom: 10px;
     }
@@ -234,14 +242,6 @@ main {
         gap: 5px;
         margin-top: 12vh;
     }
-
-    .services3-container .testimonials-cell {
-        padding: 5px;
-    }
-
-    /* .services3-container .testimonials-cell p{
-        text-align: justify;
-    } */
 
     .signup {
         margin-top: -30vh;
@@ -253,9 +253,17 @@ main {
 }
 
 @media screen and (max-width: 408px) {
-    /* A PARTIR DE  */
-    /* .services3-container {
-        margin: 10vh auto;
-        padding: 0 5px;
-    } */
+    .services3-container .testimonials-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 4px;
+    }
+
+    .services3-container .testimonial-cell {
+        padding: 3px;
+    }
+
+    .signup {
+        margin-top: 0vh;
+    }
 }

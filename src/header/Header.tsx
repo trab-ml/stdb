@@ -10,7 +10,7 @@ const Header = () => {
     return (<AppBar id='appbar'>
         <ToolbarComponent />
         <RoutesComponent />
-    </AppBar>)
+    </AppBar>);
 }
 
 export default Header; 

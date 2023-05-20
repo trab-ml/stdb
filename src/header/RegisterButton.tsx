@@ -1,5 +1,4 @@
 import React, { useContext, useCallback } from 'react';
-import { Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { selectedNavIsHomeContext } from './Context';
 
@@ -11,10 +10,10 @@ export const RegisterButton = () => {
   }, [setSelectedNavIsHome]);
 
   const navLink = (
-    <NavLink id='register-btn' className='get-hosted' to='/register' onClick={handleClick}>
-      <Button className='button' variant="contained">
+    <NavLink id='register-link' className='get-hosted' to='/register' onClick={handleClick}>
         Register
-      </Button>
+      {/* <Button className='button' variant="contained">
+      </Button> */}
     </NavLink>
   );
 

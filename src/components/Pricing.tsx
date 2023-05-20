@@ -1,6 +1,4 @@
-import React from 'react'
-import { Typography } from '@mui/material';
-import { Box, Container } from '@mui/system';
+import React from 'react';
 import Housing from './Housing';
 
 const data = [
@@ -38,72 +36,51 @@ const data = [
   },
 ];
 
+const HousingItem: React.FC<HousingData> = React.memo(
+  ({ id, title, location, image, description, rate }) => (
+    <Housing
+      title={title}
+      location={location}
+      image={image}
+      description={description}
+      rate={rate}
+    />
+  ),
+  (prevProps, nextProps) =>
+    prevProps.title === nextProps.title &&
+    prevProps.location === nextProps.location &&
+    prevProps.image === nextProps.image &&
+    prevProps.description === nextProps.description &&
+    prevProps.rate === nextProps.rate
+);
+
+interface HousingData {
+  id: number;
+  title: string;
+  location: string;
+  image: string;
+  description: string;
+  rate: number;
+}
+
 function Pricing() {
   return (
-    <Container disableGutters maxWidth='xl' 
-      sx={{
-        px: {
-          xs: 2,
-          sm: 5,
-          md: 10
-        },
-        my: 15
-      }}
-    >
-      <Box 
-        sx={{
-          display: "flex",
-          flexDirection: {
-            xs: "column",
-            md: "row"
-          },
-          alignItems: "center",
-          justifyContent: "space-between"
-        }} 
-      >
-        <Typography 
-          sx={{
-            fontFamily: 'Poppins',
-            fontWeight: '600',
-            fontSize: '32px',
-            color: '#161414',
-            textAlign: {
-              xs: 'center',
-              md: 'left'
-            }
-          }} 
-        > 
-          Logements Étudiants
-        </Typography>
-      </Box>
-
-      <Box 
-        sx={{
-          display: "flex",
-          gap: '16px', 
-          flexDirection: {
-            xs: "column",
-            md: "row"
-          },
-          alignItems: {
-            xs: "center",
-            md: "flex-start"
-          },
-          justifyContent: "space-between"
-        }}
-      >
+    <div id="housing-list-container">
+      <h2> Logements Étudiants </h2>
+      <div id="housing-list">
         {data.map((item) => (
-          <Housing 
+          <HousingItem
             key={item.id}
+            id={item.id}
             title={item.title}
             location={item.location}
             image={item.image}
             description={item.description}
             rate={item.rate}
           />
-        ))}
-      </Box>
-    </Container>
+          ))}
+      </div>
+    </div>
   )
 }
 
